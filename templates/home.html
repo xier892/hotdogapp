@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="flex flow-column">
+  <h1>Hot dog…<br role="presentation">or not dog?</h1>
+</header>
+
+<form class="file-upload flow flex flow-column w-100" id="file-upload" method="post" enctype="multipart/form-data">
+  <div class="w-100">
+    <input type="file" id="file" name="file" accept="image/png,image/jpeg">
+    <label class="upload-area" for="file">
+      <div class="upload-area-label flow flex flow-column">
+        <img src="{{ url_for('static', filename='upload.svg' )}}" alt="">
+        <span>Choose an image to upload.</span>
+      </div>
+    </label>
+  </div>
+  <button class="button">Submit</button>
+</form>
+{% endblock %}
+
+{% block includes %}
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+{% endblock %}

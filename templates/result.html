@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% set prediction_state = 'hotdog' if is_hotdog else 'not hotdog' %}
+
+{% block content %}
+{% if is_hotdog %}
+<h1>Hot dog</h1>
+{% else %}
+<h1>Not hot dog</h1>
+{% endif %}
+<a class="button" href="{{ url_for('home') }}">Try Another</a>
+{% endblock %}
+
+{% block includes %}
+<script src="{{ url_for('static', filename='result.js') }}"></script>
+{% endblock %}

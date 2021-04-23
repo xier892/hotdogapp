@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-prediction-state="{{ prediction_state }}">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What would you say if I told you there is an app on the market…">
+    <title>SeeFood</title>
+  </head>
+  <body class="flex flow-column">
+    <div class="wrapper flex space-around text-align-center w-100">
+      <img src="{{ url_for('static', filename='hotdog.svg') }}" class="hotdog" alt="">
+      <div class="content flow">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <img src="{{ url_for('static', filename='hotdog.svg') }}" class="hotdog" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    {% block includes %}
+    {% endblock %}
+  </body>
+</html>
