@@ -9,7 +9,7 @@ from keras.preprocessing import image
 
 import keras
 from keras.models import load_model
-from keras.applications import ResNet50
+from tensorflow.python.keras.applications.resnet import ResNet50
 from keras.applications.resnet50 import preprocess_input
 
 import json
